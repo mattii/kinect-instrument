@@ -603,6 +603,10 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
+   <PIN pinname="Resolution" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="85" srcpinname="Layer" dstnodeid="22" dstpinname="Layer 5">
    </LINK>
