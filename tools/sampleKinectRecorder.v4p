@@ -1,0 +1,379 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta29.dtd" >
+   <PATCH nodename="C:\Users\Matthias Lohscheidt\Desktop\vvvv\projects\KinectInstrument\kinect-instrument.git\tools\sampleKinectRecorder.v4p" systemname="sampleKinectRecorder" filename="C:\Users\Matthias Lohscheidt\Desktop\Reäktor\dev\reaktor\kinect\vvvv\examples\Recording-Playback\sampleKinectRecorder.v4p">
+   <BOUNDS type="Window" left="3270" top="2280" width="11865" height="12465">
+   </BOUNDS>
+   <NODE systemname="Kinect (Devices Microsoft)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.MSKinect.dll" nodename="Kinect (Devices Microsoft)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1755" top="4650" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Kinect Runtime" visible="1">
+   </PIN>
+   <PIN pinname="Enable Skeleton" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Skeleton (Kinect Microsoft)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.MSKinect.dll" nodename="Skeleton (Kinect Microsoft)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1755" top="5625" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Kinect Runtime" visible="1">
+   </PIN>
+   <PIN pinname="Joint PositionXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Frame Number" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Kinect Runtime" dstnodeid="1" dstpinname="Kinect Runtime">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="2">
+   <BOUNDS type="Node" left="2565" top="3465" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2565" top="3465" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Enable Skeleton">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="3">
+   <BOUNDS type="Node" left="3330" top="3465" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3330" top="3465" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|On / Off|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Enabled" linkstyle="VHV">
+   <LINKPOINT x="3330" y="4240">
+   </LINKPOINT>
+   <LINKPOINT x="3090" y="4340">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="4">
+   <BOUNDS type="Node" left="4515" top="3465" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4515" top="3465" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Reset Kinect|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Reset" linkstyle="VHV">
+   <LINKPOINT x="4425" y="4360">
+   </LINKPOINT>
+   <LINKPOINT x="3345" y="4460">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="7935" top="7200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="7">
+   <BOUNDS type="Node" left="7920" top="7695" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7920" top="7695" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="435" top="2790" width="6240" height="5010">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Layer" dstnodeid="7" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="Transform (Transform 3d Vector)" nodename="Transform (Transform 3d Vector)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="8085" top="6645" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Translate XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Scale XYZ" slicecount="3" values="0.02,0.02,0.02">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Joint PositionXYZ" dstnodeid="9" dstpinname="Translate XYZ" linkstyle="VHV">
+   <LINKPOINT x="2595" y="6060">
+   </LINKPOINT>
+   <LINKPOINT x="8310" y="6060">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Transform Out" dstnodeid="6" dstpinname="Transform">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\Kinect\Perspective (Transform Kinect).v4p" id="10" nodename="Perspective (Transform Kinect)" systemname="Perspective (Transform Kinect)">
+   <BOUNDS height="100" left="10020" top="7200" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="10020" top="7200">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Transform Out" dstnodeid="7" dstpinname="Projection">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="22">
+   <BOUNDS type="Node" left="3570" top="6465" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3570" top="6465" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Reset Data|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="2340" top="8070" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="19">
+   <BOUNDS type="Node" left="1170" top="6465" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1170" top="6465" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Record">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="18">
+   <BOUNDS type="Node" left="4860" top="6465" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4860" top="6465" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Save To File|">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="17">
+   <BOUNDS type="Node" left="6000" top="6465" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6000" top="6465" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Choose File|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="14">
+   <BOUNDS type="Node" left="2565" top="10875" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2565" top="10875" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1" encoded="0" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="13">
+   <BOUNDS type="Node" left="3660" top="10875" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3660" top="10875" width="4350" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1" encoded="0" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="11">
+   <BOUNDS type="Node" left="765" top="10875" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="765" top="10875" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Buffered Frames|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="23">
+   <BOUNDS type="Node" left="2325" top="7230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="23" dstpinname="Switch" linkstyle="VHV">
+   <LINKPOINT x="1230" y="7073">
+   </LINKPOINT>
+   <LINKPOINT x="2325" y="7073">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Frame Number" dstnodeid="23" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Output" dstnodeid="20" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="25" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="270" top="180" width="3300" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="270" top="180" width="6300" height="450">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" encoded="0" values="|Beispiel Kinect Recorder|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="13">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="24" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="270" top="825" width="12720" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="270" top="825" width="6645" height="1605">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" encoded="0" values="|Kinect anschalten und Record klicken. Wenn die Aufnahme gestoppt wird, kann man den Buffer in ein vorher ausgewähltes File speichern (Save To File). Mit Reset wird der Buffer wieder geleert.&cr;&lf;&cr;&lf;BUGS: &cr;&lf;- Status funktioniert nicht. zeigt immer &quot;ready&quot;, sollte eigentlich &quot;busy...&quot; zeigen, wenn er dabei ist zu schreiben.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE id="12" componentmode="Hidden" systemname="Recorder" filename="..\lib\Recorder.v4p" nodename="..\lib\Recorder.v4p" hiddenwhenlocked="0" managers="">
+   <PIN pinname="Record" visible="1" pintype="Input">
+   </PIN>
+   <PIN pinname="Reset" visible="1" pintype="Input">
+   </PIN>
+   <PIN pinname="Save To File" visible="1" pintype="Input">
+   </PIN>
+   <PIN pinname="Choose File" visible="1" pintype="Input">
+   </PIN>
+   <PIN pinname="Input" visible="1" pintype="Input">
+   </PIN>
+   <BOUNDS type="Node" left="2100" top="10140" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Target File" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Status" visible="1" pintype="Output">
+   </PIN>
+   <BOUNDS type="Box" left="0" top="3645" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5850" top="1560" width="15615" height="13440">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Patch" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Buffered Frames" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Target File" dstnodeid="13" dstpinname="Input String" linkstyle="VHV">
+   <LINKPOINT x="3105" y="10635">
+   </LINKPOINT>
+   <LINKPOINT x="3645" y="10635">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Status" dstnodeid="14" dstpinname="Input String" linkstyle="VHV">
+   <LINKPOINT x="2700" y="10645">
+   </LINKPOINT>
+   <LINKPOINT x="2475" y="10640">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Choose File" linkstyle="VHV">
+   <LINKPOINT x="5930" y="9525">
+   </LINKPOINT>
+   <LINKPOINT x="3175" y="9750">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Save To File" linkstyle="VHV">
+   <LINKPOINT x="4920" y="9255">
+   </LINKPOINT>
+   <LINKPOINT x="2805" y="9480">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Reset" linkstyle="VHV">
+   <LINKPOINT x="3690" y="8985">
+   </LINKPOINT>
+   <LINKPOINT x="2505" y="9210">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="OnChange" dstnodeid="12" dstpinname="Record">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Buffered Frames" dstnodeid="11" dstpinname="Y Input Value" linkstyle="VHV">
+   <LINKPOINT x="2100" y="10628">
+   </LINKPOINT>
+   <LINKPOINT x="825" y="10628">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Joint PositionXYZ" dstnodeid="12" dstpinname="Input" linkstyle="VHV">
+   <LINKPOINT x="2595" y="6060">
+   </LINKPOINT>
+   <LINKPOINT x="2130" y="6060">
+   </LINKPOINT>
+   </LINK>
+   </PATCH>

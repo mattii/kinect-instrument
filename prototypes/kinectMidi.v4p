@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta29.dtd" >
-   <PATCH nodename="C:\Users\Matthias Lohscheidt\Desktop\vvvv\projects\KinectInstrument\kinect-instrument.git\tests\kinect\armEvents.v4p" systemname="armEvents" filename="C:\Users\Matthias Lohscheidt\Desktop\vvvv\projects\KinectInstrument\kinect-instrument.git\tests\kinect\armEvents.v4p">
+   <PATCH nodename="C:\Users\Matthias Lohscheidt\Desktop\vvvv\projects\KinectInstrument\kinect-instrument.git\prototypes\kinectMidi.v4p" systemname="kinectMidi" filename="C:\Users\Matthias Lohscheidt\Desktop\vvvv\projects\KinectInstrument\kinect-instrument.git\prototypes\kinectMidi.v4p">
    <BOUNDS type="Window" left="0" top="0" width="20040" height="15750">
    </BOUNDS>
    <NODE systemname="Kinect (Devices Microsoft)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.MSKinect.dll" nodename="Kinect (Devices Microsoft)" componentmode="Hidden" id="0">
@@ -192,7 +192,7 @@
    <LINKPOINT x="2490" y="2003">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="Player" filename="..\..\lib\Player.v4p" nodename="..\..\lib\Player.v4p" componentmode="Hidden" id="28">
+   <NODE systemname="Player" filename="..\lib\Player.v4p" nodename="..\..\lib\Player.v4p" componentmode="Hidden" id="28">
    <BOUNDS type="Node" left="6495" top="2640" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
@@ -924,7 +924,7 @@
    </NODE>
    <LINK srcnodeid="1" srcpinname="Joint PositionXYZ" dstnodeid="82" dstpinname="Y Input Value">
    </LINK>
-   <NODE id="99" componentmode="Hidden" nodename="Text (EX9)" systemname="Text (EX9)" filename="%VVVV%\plugins\DrawText.dll">
+   <NODE id="99" componentmode="Hidden" nodename="Text (EX9)" systemname="Text (EX9)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <PIN pinname="Color" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Text" visible="1" slicecount="2" values="Tesst,Test2">
@@ -1156,7 +1156,7 @@
    </NODE>
    <LINK srcnodeid="102" srcpinname="Output" dstnodeid="99" dstpinname="Brush Color">
    </LINK>
-   <NODE systemname="singleMidiNoteSender" filename="..\..\lib\midi\singleMidiNoteSender.v4p" nodename="..\..\lib\midi\singleMidiNoteSender.v4p" componentmode="Hidden" id="103">
+   <NODE systemname="singleMidiNoteSender" filename="..\lib\midi\singleMidiNoteSender.v4p" nodename="..\..\lib\midi\singleMidiNoteSender.v4p" componentmode="Hidden" id="103">
    <BOUNDS type="Node" left="11268" top="15090" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Note" visible="1" slicecount="1" values="18">
