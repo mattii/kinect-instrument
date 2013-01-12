@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="D:\WORK\VVVV\130104_Kinectstrument_GIT\tracking\tracker.v4p" systemname="tracker" filename="D:\WORK\VVVV\130104_Kinectstrument_GIT\tracking\tracker.v4p">
-   <BOUNDS type="Window" left="2295" top="1380" width="21990" height="18420">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta29.dtd" >
+   <PATCH nodename="C:\Users\Matthias Lohscheidt\Desktop\vvvv\projects\KinectInstrument\kinect-instrument.git\tracking\tracker.v4p" systemname="tracker" filename="D:\WORK\VVVV\130104_Kinectstrument_GIT\tracking\tracker.v4p">
+   <BOUNDS type="Window" left="0" top="330" width="21990" height="15990">
    </BOUNDS>
    <NODE systemname="Kinect (Devices Microsoft)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.MSKinect.dll" nodename="Kinect (Devices Microsoft)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2220" top="1050" width="100" height="100">
@@ -20,6 +20,8 @@
    <PIN pinname="Enable Skeleton Smoothing" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="RGB (Kinect Microsoft)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.MSKinect.dll" nodename="RGB (Kinect Microsoft)" componentmode="Hidden" id="1">
@@ -79,7 +81,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2850" top="18765" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="25110" top="3885" width="11715" height="10095">
+   <BOUNDS type="Window" left="13290" top="5655" width="11715" height="10095">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -467,11 +469,11 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="X" slicecount="1" values="-0.08">
+   <PIN pinname="X" slicecount="1" values="0.05">
    </PIN>
-   <PIN pinname="Y" slicecount="1" values="-0.46">
+   <PIN pinname="Y" slicecount="1" values="-0.67">
    </PIN>
-   <PIN pinname="Z" slicecount="1" values="0.01">
+   <PIN pinname="Z" slicecount="1" values="1.95">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="all">
    </PIN>
@@ -535,7 +537,7 @@
    </PIN>
    <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D16">
    </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="8">
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
    <PIN pinname="EX9 Out" visible="1">
    </PIN>
@@ -573,11 +575,11 @@
    <LINK srcnodeid="53" srcpinname="Y Out" dstnodeid="47" dstpinname="Z">
    </LINK>
    <NODE nodename="Vector (3D Join)" id="83" systemname="Vector (3d Join)">
-   <PIN pinname="X" slicecount="1" values="0.28">
+   <PIN pinname="X" slicecount="1" values="0.76">
    </PIN>
-   <PIN pinname="Y" slicecount="1" values="0.86">
+   <PIN pinname="Y" slicecount="1" values="0.93">
    </PIN>
-   <PIN pinname="Z" slicecount="1" values="-0.44">
+   <PIN pinname="Z" slicecount="1" values="0.93">
    </PIN>
    <BOUNDS type="Node" left="8880" top="12195" width="0" height="0">
    </BOUNDS>
@@ -793,7 +795,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="21105" top="10065" width="2355" height="1470">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|ausserhalb eines quads wird erkannt dass mehrere quads intersected werden. damit immer dann null rauskoimmt wenn null ist auf xor prüfen|" encoded="0">
+   <PIN pinname="Input String" visible="0" slicecount="1" encoded="0" values="|ausserhalb eines quads wird erkannt dass mehrere quads intersected werden. damit immer dann null rauskoimmt wenn null ist auf xor prüfen|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -802,4 +804,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <LINK srcnodeid="5" srcpinname="PositionXYZ" dstnodeid="99" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>

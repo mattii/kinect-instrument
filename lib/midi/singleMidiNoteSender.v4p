@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta29.dtd" >
    <PATCH nodename="C:\Users\Matthias Lohscheidt\Desktop\vvvv\projects\KinectInstrument\kinect-instrument.git\lib\midi\singleMidiNoteSender.v4p" systemname="singleMidiNoteSender" filename="C:\Users\Matthias Lohscheidt\Desktop\vvvv\projects\KinectInstrument\kinect-instrument.git\lib\midi\singleMidiNoteSender.v4p">
-   <BOUNDS type="Window" left="2550" top="0" width="16560" height="13755">
+   <BOUNDS type="Window" left="1845" top="1170" width="16560" height="13755">
    </BOUNDS>
    <NODE systemname="MidiNoteOut (Devices)" filename="%VVVV%\lib\nodes\modules\MidiNoteOut (Devices).v4p" nodename="MidiNoteOut (Devices)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="5910" top="13830" width="100" height="100">
