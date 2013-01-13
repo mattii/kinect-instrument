@@ -1,0 +1,1019 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
+   <PATCH nodename="C:\Users\bernardo\Desktop\GeometryGroup\GeometryGroup.v4p" filename="C:\Users\bernardo\Documents\vvvv\- Proyectos berna\- Herramientas Mapping\- Posta\- MappingPosta\Geometria.v4p" systemname="Geometria">
+   <BOUNDS height="10620" left="5400" top="135" type="Window" width="13830">
+   </BOUNDS>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="26" nodename="VertexBuffer (EX9.Geometry Split)" systemname="VertexBuffer (EX9.Geometry Split)">
+   <BOUNDS height="270" left="240" top="1365" type="Node" width="990">
+   </BOUNDS>
+   <PIN pinname="Vertex Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Position XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Normal XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Enable Binormal" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enable Tangent" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enable Texture Coordinate 0" slicecount="1" values="|2D TexCoords|">
+   </PIN>
+   <PIN pinname="Texture Coordinate 0 XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Texture Coordinate 0 XY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE hiddenwhenlocked="1" id="25" nodename="VertexBuffer (EX9.Geometry Join)" systemname="VertexBuffer (EX9.Geometry Join)">
+   <BOUNDS height="270" left="1545" top="5400" type="Node" width="3945">
+   </BOUNDS>
+   <PIN pinname="do Write VertexBuffer" visible="1">
+   </PIN>
+   <PIN pinname="PositionXYZ" visible="1">
+   </PIN>
+   <PIN pinname="VertexBuffer" visible="1">
+   </PIN>
+   <PIN pinname="Diffuse Color" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Vertex Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Position XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Apply" visible="1">
+   </PIN>
+   <PIN pinname="Enable Diffuse Color" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Normal XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Texture Coordinate 0 XY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE hiddenwhenlocked="1" id="24" nodename="Mesh (EX9.Geometry Join)" systemname="Mesh (EX9.Geometry Join)">
+   <BOUNDS height="270" left="1530" top="8535" type="Node" width="1095">
+   </BOUNDS>
+   <PIN pinname="Indices" visible="1">
+   </PIN>
+   <PIN pinname="do create Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="VertexBuffer" visible="1">
+   </PIN>
+   <PIN pinname="Vertex Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Apply" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="24" dstpinname="Vertex Buffer" hiddenwhenlocked="1" srcnodeid="25" srcpinname="Vertex Buffer">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="23" nodename="VertexBuffer (EX9.Geometry Split)" systemname="VertexBuffer (EX9.Geometry Split)">
+   <BOUNDS height="100" left="3390" top="1365" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Vertex Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Position XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Normal XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Enable Texture Coordinate 0" slicecount="1" values="|2D TexCoords|">
+   </PIN>
+   <PIN pinname="Texture Coordinate 0 XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Texture Coordinate 0 XY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" hiddenwhenlocked="1" id="22" nodename="Cons (Spreads)" systemname="Cons (Spreads)">
+   <BOUNDS height="100" left="1545" top="4770" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <BOUNDS left="1545" top="4770" type="Box">
+   </BOUNDS>
+   <PIN pinname="Input 4" visible="1">
+   </PIN>
+   <PIN pinname="Input 5" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" hiddenwhenlocked="1" id="21" nodename="Cons (Spreads)" systemname="Cons (Spreads)">
+   <BOUNDS height="270" left="2070" top="7620" type="Node" width="3360">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <BOUNDS left="2070" top="7620" type="Box">
+   </BOUNDS>
+   <PIN pinname="Input 4" visible="1">
+   </PIN>
+   <PIN pinname="Input 5" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="25" dstpinname="Position XYZ" hiddenwhenlocked="1" srcnodeid="22" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="24" dstpinname="Indices" hiddenwhenlocked="1" srcnodeid="21" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="20" nodename="Count (Value)" systemname="Count (Value)">
+   <BOUNDS height="270" left="2940" top="6045" type="Node" width="600">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="20" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="26" srcpinname="Position XYZ">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="19" nodename="Divide (Value)" systemname="Divide (Value)">
+   <BOUNDS height="100" left="2925" top="6435" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="19" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="20" srcpinname="Count">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="18" nodename="Add (Value)" systemname="Add (Value)">
+   <BOUNDS height="100" left="2640" top="6870" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="18" dstpinname="Input 2" hiddenwhenlocked="1" srcnodeid="19" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" hiddenwhenlocked="1" id="17" nodename="Cons (Spreads)" systemname="Cons (Spreads)">
+   <BOUNDS height="100" left="2520" top="4770" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS left="2520" top="4770" type="Box">
+   </BOUNDS>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Input 4" visible="1">
+   </PIN>
+   <PIN pinname="Input 5" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="17" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="26" srcpinname="Normal XYZ">
+   </LINK>
+   <LINK dstnodeid="25" dstpinname="Normal XYZ" hiddenwhenlocked="1" srcnodeid="17" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="21" dstpinname="Input 2" hiddenwhenlocked="1" srcnodeid="18" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="17" dstpinname="Input 2" hiddenwhenlocked="1" srcnodeid="23" srcpinname="Normal XYZ">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="16" nodename="VertexBuffer (EX9.Geometry Split)" systemname="VertexBuffer (EX9.Geometry Split)">
+   <BOUNDS height="270" left="6180" top="1365" type="Node" width="1185">
+   </BOUNDS>
+   <PIN pinname="Vertex Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Position XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Normal XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Enable Texture Coordinate 0" slicecount="1" values="|2D TexCoords|">
+   </PIN>
+   <PIN pinname="Texture Coordinate 0 XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Texture Coordinate 0 XY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="15" nodename="Count (Value)" systemname="Count (Value)">
+   <BOUNDS height="270" left="3870" top="6045" type="Node" width="600">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="14" nodename="Divide (Value)" systemname="Divide (Value)">
+   <BOUNDS height="100" left="3870" top="6435" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="14" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="15" srcpinname="Count">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="13" nodename="Add (Value)" systemname="Add (Value)">
+   <BOUNDS height="100" left="3480" top="6870" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="15" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="23" srcpinname="Position XYZ">
+   </LINK>
+   <LINK dstnodeid="13" dstpinname="Input 3" hiddenwhenlocked="1" srcnodeid="14" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="13" dstpinname="Input 2" hiddenwhenlocked="1" srcnodeid="19" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="21" dstpinname="Input 3" hiddenwhenlocked="1" srcnodeid="13" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" hiddenwhenlocked="1" id="12" nodename="Cons (Spreads)" systemname="Cons (Spreads)">
+   <BOUNDS height="100" left="3480" top="4770" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS left="3480" top="4770" type="Box">
+   </BOUNDS>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Input 4" visible="1">
+   </PIN>
+   <PIN pinname="Input 5" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="25" dstpinname="Texture Coordinate 0 XY" hiddenwhenlocked="1" srcnodeid="12" srcpinname="Output">
+   </LINK>
+   <NODE hiddenwhenlocked="1" id="11" managers="" nodename="ApplyTransform (Transform Vector)" systemname="ApplyTransform (Transform Vector)">
+   <PIN pinname="Transform" pintype="Input" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="XYZ Transformed" pintype="Output" visible="1">
+   </PIN>
+   <BOUNDS height="0" left="3390" top="1755" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="XYZ UnTransformed" pintype="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="22" dstpinname="Input 2" hiddenwhenlocked="1" srcnodeid="11" srcpinname="XYZ Transformed">
+   </LINK>
+   <LINK dstnodeid="11" dstpinname="XYZ UnTransformed" hiddenwhenlocked="1" srcnodeid="23" srcpinname="Position XYZ">
+   </LINK>
+   <NODE hiddenwhenlocked="1" id="10" managers="" nodename="ApplyTransform (Transform Vector)" systemname="ApplyTransform (Transform Vector)">
+   <PIN pinname="Transform" pintype="Input" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="XYZ Transformed" pintype="Output" visible="1">
+   </PIN>
+   <BOUNDS height="0" left="6180" top="1755" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="XYZ UnTransformed" pintype="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="22" dstpinname="Input 3" hiddenwhenlocked="1" srcnodeid="10" srcpinname="XYZ Transformed">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="XYZ UnTransformed" hiddenwhenlocked="1" srcnodeid="16" srcpinname="Position XYZ">
+   </LINK>
+   <NODE hiddenwhenlocked="1" id="7" managers="" nodename="ApplyTransform (Transform Vector)" systemname="ApplyTransform (Transform Vector)">
+   <PIN pinname="Transform" pintype="Input" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="XYZ Transformed" pintype="Output" visible="1">
+   </PIN>
+   <BOUNDS height="0" left="240" top="1755" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="XYZ UnTransformed" pintype="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="7" dstpinname="XYZ UnTransformed" hiddenwhenlocked="1" srcnodeid="26" srcpinname="Position XYZ">
+   </LINK>
+   <LINK dstnodeid="22" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="7" srcpinname="XYZ Transformed">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="5" nodename="Map (Value)" systemname="Map (Value)">
+   <BOUNDS height="100" left="4185" top="3405" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Destination Maximum" slicecount="1" values="0.666666666">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0.333333333333333">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="17" dstpinname="Input 3" hiddenwhenlocked="1" srcnodeid="16" srcpinname="Normal XYZ">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="4" nodename="Map (Value)" systemname="Map (Value)">
+   <BOUNDS height="100" left="2190" top="3390" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Destination Maximum" slicecount="1" values="0.66666666666666">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0.333333333333333">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="3" nodename="Map (Value)" systemname="Map (Value)">
+   <BOUNDS height="100" left="3210" top="3405" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Destination Maximum" slicecount="1" values="0.6666">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0.3333">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="2" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="13050" top="210" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="480" left="13050" top="210" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Apply">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="25" dstpinname="Apply" hiddenwhenlocked="1" srcnodeid="2" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="27" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="225" top="210" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="225" top="210" type="Box" width="840">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Mesh 1|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="28" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="3390" top="210" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="3390" top="210" type="Box" width="840">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Mesh 2|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="29" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="6165" top="210" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="6165" top="210" type="Box" width="840">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Mesh 3|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="31" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="1530" top="9435" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1530" top="9435" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Mesh">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="32" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="1125" top="210" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1125" top="210" type="Box" width="840">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform 1|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="33" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="4305" top="210" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="4305" top="210" type="Box" width="840">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform 2|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="34" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="7080" top="210" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="7080" top="210" type="Box" width="840">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform 3|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="7" dstpinname="Transform" hiddenwhenlocked="1" srcnodeid="32" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="11" dstpinname="Transform" hiddenwhenlocked="1" srcnodeid="33" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Transform" hiddenwhenlocked="1" srcnodeid="34" srcpinname="Output Node">
+   </LINK>
+   <NODE hiddenwhenlocked="1" id="53" nodename="Mesh (EX9.Geometry Split)" systemname="Mesh (EX9.Geometry Split)">
+   <BOUNDS height="270" left="255" top="1005" type="Node" width="570">
+   </BOUNDS>
+   <PIN pinname="Mesh" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Vertex Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Indices" visible="1">
+   </PIN>
+   </NODE>
+   <NODE hiddenwhenlocked="1" id="52" nodename="Mesh (EX9.Geometry Split)" systemname="Mesh (EX9.Geometry Split)">
+   <BOUNDS height="270" left="3390" top="1005" type="Node" width="570">
+   </BOUNDS>
+   <PIN pinname="Mesh" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Vertex Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Indices" visible="1">
+   </PIN>
+   </NODE>
+   <NODE hiddenwhenlocked="1" id="51" nodename="Mesh (EX9.Geometry Split)" systemname="Mesh (EX9.Geometry Split)">
+   <BOUNDS height="270" left="6180" top="1005" type="Node" width="570">
+   </BOUNDS>
+   <PIN pinname="Mesh" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Vertex Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Indices" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="53" dstpinname="Mesh" hiddenwhenlocked="1" srcnodeid="27" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="26" dstpinname="Vertex Buffer" hiddenwhenlocked="1" srcnodeid="53" srcpinname="Vertex Buffer">
+   </LINK>
+   <LINK dstnodeid="52" dstpinname="Mesh" hiddenwhenlocked="1" srcnodeid="28" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="23" dstpinname="Vertex Buffer" hiddenwhenlocked="1" srcnodeid="52" srcpinname="Vertex Buffer">
+   </LINK>
+   <LINK dstnodeid="51" dstpinname="Mesh" hiddenwhenlocked="1" srcnodeid="29" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="16" dstpinname="Vertex Buffer" hiddenwhenlocked="1" srcnodeid="51" srcpinname="Vertex Buffer">
+   </LINK>
+   <LINK dstnodeid="21" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="53" srcpinname="Indices">
+   </LINK>
+   <LINK dstnodeid="18" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="52" srcpinname="Indices">
+   </LINK>
+   <LINK dstnodeid="13" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="51" srcpinname="Indices">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="56" nodename="Vector (2d Split)" systemname="Vector (2d Split)">
+   <BOUNDS height="100" left="1185" top="2910" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="56" dstpinname="XY" hiddenwhenlocked="1" srcnodeid="26" srcpinname="Texture Coordinate 0 XY">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="57" nodename="Map (Value)" systemname="Map (Value)">
+   <BOUNDS height="100" left="1200" top="3405" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Destination Maximum" slicecount="1" values="0.33333">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="58" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
+   <BOUNDS height="100" left="1200" top="3885" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="58" dstpinname="X" hiddenwhenlocked="1" srcnodeid="57" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="58" dstpinname="Y" hiddenwhenlocked="1" srcnodeid="4" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="12" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="58" srcpinname="XY">
+   </LINK>
+   <LINK dstnodeid="57" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="56" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="4" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="56" srcpinname="Y">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="72" nodename="Vector (2d Split)" systemname="Vector (2d Split)">
+   <BOUNDS height="100" left="3210" top="2910" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="72" dstpinname="XY" hiddenwhenlocked="1" srcnodeid="23" srcpinname="Texture Coordinate 0 XY">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="72" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="5" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="72" srcpinname="Y">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="73" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
+   <BOUNDS height="100" left="3210" top="3885" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="73" dstpinname="X" hiddenwhenlocked="1" srcnodeid="3" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="73" dstpinname="Y" hiddenwhenlocked="1" srcnodeid="5" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="12" dstpinname="Input 2" hiddenwhenlocked="1" srcnodeid="73" srcpinname="XY">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="77" nodename="Map (Value)" systemname="Map (Value)">
+   <BOUNDS height="100" left="6240" top="3375" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Destination Maximum" slicecount="1" values="0.66666666">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0.3333333333333">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="76" nodename="Map (Value)" systemname="Map (Value)">
+   <BOUNDS height="100" left="5295" top="3375" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Destination Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0.6666">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="75" nodename="Vector (2d Split)" systemname="Vector (2d Split)">
+   <BOUNDS height="100" left="5295" top="2910" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="76" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="75" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="77" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="75" srcpinname="Y">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="74" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
+   <BOUNDS height="100" left="5310" top="3885" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="74" dstpinname="X" hiddenwhenlocked="1" srcnodeid="76" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="74" dstpinname="Y" hiddenwhenlocked="1" srcnodeid="77" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="75" dstpinname="XY" hiddenwhenlocked="1" srcnodeid="16" srcpinname="Texture Coordinate 0 XY">
+   </LINK>
+   <LINK dstnodeid="12" dstpinname="Input 3" hiddenwhenlocked="1" srcnodeid="74" srcpinname="XY">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="82" nodename="VertexBuffer (EX9.Geometry Split)" systemname="VertexBuffer (EX9.Geometry Split)">
+   <BOUNDS height="270" left="8670" top="1365" type="Node" width="1185">
+   </BOUNDS>
+   <PIN pinname="Vertex Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Position XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Normal XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Enable Texture Coordinate 0" slicecount="1" values="|2D TexCoords|">
+   </PIN>
+   <PIN pinname="Texture Coordinate 0 XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Texture Coordinate 0 XY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE hiddenwhenlocked="1" id="81" managers="" nodename="ApplyTransform (Transform Vector)" systemname="ApplyTransform (Transform Vector)">
+   <PIN pinname="Transform" pintype="Input" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="XYZ Transformed" pintype="Output" visible="1">
+   </PIN>
+   <BOUNDS height="0" left="8655" top="1755" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="XYZ UnTransformed" pintype="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="81" dstpinname="XYZ UnTransformed" hiddenwhenlocked="1" srcnodeid="82" srcpinname="Position XYZ">
+   </LINK>
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="80" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="8670" top="210" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="8670" top="210" type="Box" width="840">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Mesh 4|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="79" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="9585" top="210" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="9585" top="210" type="Box" width="840">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform 4|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="81" dstpinname="Transform" hiddenwhenlocked="1" srcnodeid="79" srcpinname="Output Node">
+   </LINK>
+   <NODE hiddenwhenlocked="1" id="78" nodename="Mesh (EX9.Geometry Split)" systemname="Mesh (EX9.Geometry Split)">
+   <BOUNDS height="270" left="8670" top="1005" type="Node" width="570">
+   </BOUNDS>
+   <PIN pinname="Mesh" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Vertex Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Indices" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="78" dstpinname="Mesh" hiddenwhenlocked="1" srcnodeid="80" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="82" dstpinname="Vertex Buffer" hiddenwhenlocked="1" srcnodeid="78" srcpinname="Vertex Buffer">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="85" nodename="Count (Value)" systemname="Count (Value)">
+   <BOUNDS height="270" left="4980" top="6045" type="Node" width="600">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="84" nodename="Divide (Value)" systemname="Divide (Value)">
+   <BOUNDS height="100" left="4965" top="6435" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="84" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="85" srcpinname="Count">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="83" nodename="Add (Value)" systemname="Add (Value)">
+   <BOUNDS height="100" left="4560" top="6870" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="83" dstpinname="Input 3" hiddenwhenlocked="1" srcnodeid="84" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="93" nodename="Map (Value)" systemname="Map (Value)">
+   <BOUNDS height="100" left="8385" top="3345" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Destination Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0.8">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="92" nodename="Map (Value)" systemname="Map (Value)">
+   <BOUNDS height="100" left="7440" top="3345" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Destination Maximum" slicecount="1" values="0.3">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="91" nodename="Vector (2d Split)" systemname="Vector (2d Split)">
+   <BOUNDS height="100" left="7440" top="2910" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="92" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="91" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="93" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="91" srcpinname="Y">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="90" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
+   <BOUNDS height="100" left="7455" top="3885" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="90" dstpinname="X" hiddenwhenlocked="1" srcnodeid="92" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="90" dstpinname="Y" hiddenwhenlocked="1" srcnodeid="93" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="12" dstpinname="Input 4" hiddenwhenlocked="1" srcnodeid="90" srcpinname="XY">
+   </LINK>
+   <LINK dstnodeid="91" dstpinname="XY" hiddenwhenlocked="1" srcnodeid="82" srcpinname="Texture Coordinate 0 XY">
+   </LINK>
+   <LINK dstnodeid="17" dstpinname="Input 4" hiddenwhenlocked="1" srcnodeid="82" srcpinname="Normal XYZ">
+   </LINK>
+   <LINK dstnodeid="22" dstpinname="Input 4" hiddenwhenlocked="1" srcnodeid="81" srcpinname="XYZ Transformed">
+   </LINK>
+   <LINK dstnodeid="21" dstpinname="Input 4" hiddenwhenlocked="1" srcnodeid="83" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="85" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="16" srcpinname="Position XYZ">
+   </LINK>
+   <LINK dstnodeid="83" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="78" srcpinname="Indices">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="143" nodename="Add (Value)" systemname="Add (Value)">
+   <BOUNDS height="100" left="4545" top="6435" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="143" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="19" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="143" dstpinname="Input 2" hiddenwhenlocked="1" srcnodeid="14" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="83" dstpinname="Input 2" hiddenwhenlocked="1" srcnodeid="143" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="145" nodename="Normals (EX9.Geometry Mesh)" systemname="Normals (EX9.Geometry Mesh)">
+   <BOUNDS height="100" left="1530" top="8970" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Compute Normals" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="145" dstpinname="Mesh" hiddenwhenlocked="1" srcnodeid="24" srcpinname="Mesh">
+   </LINK>
+   <LINK dstnodeid="31" dstpinname="Input Node" hiddenwhenlocked="1" srcnodeid="145" srcpinname="Mesh">
+   </LINK>
+   <LINK dstnodeid="24" dstpinname="Apply" hiddenwhenlocked="1" srcnodeid="2" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="150" nodename="VertexBuffer (EX9.Geometry Split)" systemname="VertexBuffer (EX9.Geometry Split)">
+   <BOUNDS height="270" left="11055" top="1365" type="Node" width="1185">
+   </BOUNDS>
+   <PIN pinname="Vertex Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Position XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Normal XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Enable Texture Coordinate 0" slicecount="1" values="|2D TexCoords|">
+   </PIN>
+   <PIN pinname="Texture Coordinate 0 XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Texture Coordinate 0 XY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE hiddenwhenlocked="0" id="149" managers="" nodename="ApplyTransform (Transform Vector)" systemname="ApplyTransform (Transform Vector)">
+   <PIN pinname="Transform" pintype="Input" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="XYZ Transformed" pintype="Output" visible="1">
+   </PIN>
+   <BOUNDS height="0" left="11040" top="1755" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="XYZ UnTransformed" pintype="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="149" dstpinname="XYZ UnTransformed" srcnodeid="150" srcpinname="Position XYZ">
+   </LINK>
+   <NODE componentmode="InABox" id="148" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="11040" top="210" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="11040" top="210" type="Box" width="840">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Mesh 5|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="147" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="11955" top="210" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="11955" top="210" type="Box" width="840">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform 5|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="146" nodename="Mesh (EX9.Geometry Split)" systemname="Mesh (EX9.Geometry Split)">
+   <BOUNDS height="270" left="11055" top="1005" type="Node" width="570">
+   </BOUNDS>
+   <PIN pinname="Mesh" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Vertex Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Indices" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="150" dstpinname="Vertex Buffer" srcnodeid="146" srcpinname="Vertex Buffer">
+   </LINK>
+   <NODE componentmode="Hidden" id="155" nodename="Map (Value)" systemname="Map (Value)">
+   <BOUNDS height="100" left="10770" top="3315" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Destination Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0.666666666666667">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="154" nodename="Map (Value)" systemname="Map (Value)">
+   <BOUNDS height="100" left="9825" top="3315" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Destination Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0.6666">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="153" nodename="Vector (2d Split)" systemname="Vector (2d Split)">
+   <BOUNDS height="100" left="9825" top="2910" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="154" dstpinname="Input" hiddenwhenlocked="0" srcnodeid="153" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="155" dstpinname="Input" hiddenwhenlocked="0" srcnodeid="153" srcpinname="Y">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="152" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
+   <BOUNDS height="100" left="9840" top="3885" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="152" dstpinname="X" hiddenwhenlocked="0" srcnodeid="154" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="152" dstpinname="Y" hiddenwhenlocked="0" srcnodeid="155" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="153" dstpinname="XY" hiddenwhenlocked="0" srcnodeid="150" srcpinname="Texture Coordinate 0 XY">
+   </LINK>
+   <LINK dstnodeid="17" dstpinname="Input 5" hiddenwhenlocked="0" srcnodeid="150" srcpinname="Normal XYZ">
+   </LINK>
+   <LINK dstnodeid="12" dstpinname="Input 5" hiddenwhenlocked="0" srcnodeid="152" srcpinname="XY">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="159" nodename="Count (Value)" systemname="Count (Value)">
+   <BOUNDS height="270" left="6015" top="6045" type="Node" width="600">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="158" nodename="Divide (Value)" systemname="Divide (Value)">
+   <BOUNDS height="270" left="6030" top="6435" type="Node" width="315">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="158" dstpinname="Input" hiddenwhenlocked="0" srcnodeid="159" srcpinname="Count">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="157" nodename="Add (Value)" systemname="Add (Value)">
+   <BOUNDS height="100" left="5655" top="6870" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="157" dstpinname="Input 3" hiddenwhenlocked="0" srcnodeid="158" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="22" dstpinname="Input 5" hiddenwhenlocked="0" srcnodeid="149" srcpinname="XYZ Transformed">
+   </LINK>
+   <LINK dstnodeid="157" dstpinname="Input 1" hiddenwhenlocked="0" srcnodeid="146" srcpinname="Indices">
+   </LINK>
+   <LINK dstnodeid="21" dstpinname="Input 5" hiddenwhenlocked="0" srcnodeid="157" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="160" nodename="Add (Value)" systemname="Add (Value)">
+   <BOUNDS height="100" left="5640" top="6435" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="160" dstpinname="Input 1" hiddenwhenlocked="0" srcnodeid="143" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="160" dstpinname="Input 2" hiddenwhenlocked="0" srcnodeid="84" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="157" dstpinname="Input 2" hiddenwhenlocked="0" srcnodeid="160" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="146" dstpinname="Mesh" srcnodeid="148" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="149" dstpinname="Transform" srcnodeid="147" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="159" dstpinname="Input" srcnodeid="82" srcpinname="Position XYZ">
+   </LINK>
+   </PATCH>

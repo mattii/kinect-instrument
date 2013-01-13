@@ -1,0 +1,375 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
+   <PATCH nodename="D:\WORK\VVVV\130104_Kinectstrument_GIT\interface\interfaceelement.v4p" systemname="interfaceelement" filename="D:\WORK\VVVV\130104_Kinectstrument_GIT\interface\interfaceelement.v4p">
+   <BOUNDS type="Window" left="17745" top="2655" width="9000" height="6000">
+   </BOUNDS>
+   <NODE id="19" nodename="VertexBuffer (EX9.Geometry Join)" systemname="VertexBuffer (EX9.Geometry Join)">
+   <BOUNDS height="270" left="2955" top="3120" type="Node" width="990">
+   </BOUNDS>
+   <PIN pinname="VertexBuffer" visible="1">
+   </PIN>
+   <PIN pinname="PositionXYZ" visible="1">
+   </PIN>
+   <PIN pinname="do Write VertexBuffer" visible="1">
+   </PIN>
+   <PIN pinname="Diffuse Color" visible="1" slicecount="4" values="|0.79291,0.79291,0.79291,1.00000|,|0.79291,0.79291,0.79291,1.00000|,|0.79291,0.79291,0.79291,1.00000|,|0.79291,0.79291,0.79291,1.00000|">
+   </PIN>
+   <PIN pinname="Enable TexCoord 0">
+   </PIN>
+   <PIN pinname="TexCoord0XY" visible="1">
+   </PIN>
+   <PIN pinname="Enable Normal" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="NormalXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Vertex Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Position XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Texture Coordinate 0 XY" visible="1">
+   </PIN>
+   <PIN pinname="Enable Diffuse Color" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Normal XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Apply" visible="1" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE id="18" nodename="Mesh (EX9.Geometry Join)" systemname="Mesh (EX9.Geometry Join)">
+   <BOUNDS height="0" left="2940" top="4920" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="VertexBuffer" visible="1">
+   </PIN>
+   <PIN pinname="do create Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Indices" visible="1">
+   </PIN>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Vertex Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Apply" visible="1" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="17" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1410" top="1065" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="8115" top="7500" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="1170" left="1410" top="1065" type="Box" width="1845">
+   </BOUNDS>
+   <PIN pinname="Columns" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="15" values="-0.5,-0.5,0,0.5,0.5,0,-0.5,0.5,0,-0.09,-0.5,0,0.5,0.06,0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="16" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="3195" top="3855" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="8415" top="7800" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="525" left="3195" top="3855" type="Box" width="1920">
+   </BOUNDS>
+   <PIN pinname="Columns" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="9" values="0,1,2,0,1,3,1,4,3">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="18" dstpinname="Indices" linkstyle="VHV" srcnodeid="16" srcpinname="Y Output Value">
+   <LINKPOINT x="5085" y="3555">
+   </LINKPOINT>
+   <LINKPOINT x="3225" y="3555">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InABox" id="15" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="5160" top="1080" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="8715" top="8100" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="1155" left="5160" top="1080" type="Box" width="1260">
+   </BOUNDS>
+   <PIN pinname="Columns" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="8" values="0,1,1,0,0,0,1,1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="13" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="1410" top="555" type="Node" width="705">
+   </BOUNDS>
+   <BOUNDS height="495" left="1410" top="555" type="Box" width="1320">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" encoded="0" values="|vertex &cr;&lf;positions|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="12" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="5160" top="585" type="Node" width="1515">
+   </BOUNDS>
+   <BOUNDS height="480" left="5160" top="585" type="Box" width="1260">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" encoded="0" values="|texture&cr;&lf;coordinates|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="10" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="3195" top="3570" type="Node" width="645">
+   </BOUNDS>
+   <BOUNDS height="270" left="3195" top="3570" type="Box" width="645">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" encoded="0" values="indices">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="9" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="690" left="7935" top="990" type="Node" width="3195">
+   </BOUNDS>
+   <BOUNDS height="3510" left="7935" top="990" type="Box" width="3075">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" encoded="0" values="|a vertexbuffer contains the geometry-data, mainly position, normal, diffuse + specular color and texture coordinates, + some more specific things, such as blendweight, vertex point size or RHW.&cr;&lf;&cr;&lf;read the directx documentation for a detailed information about vertexbuffers:&cr;&lf;&cr;&lf;http://msdn.microsoft.com/library/default.asp?url=/library/en-us/directx9_c/directx/graphics/ProgrammingGuide/GettingStarted/Direct3DResources/VertexBuffers/vertexbuffers.asp|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="8" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="3345" top="1080" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="6495" top="12345" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="3345" top="1080" type="Box" width="1770">
+   </BOUNDS>
+   <PIN pinname="Columns" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="3" values="0,1,0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="7" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="3360" top="585" type="Node" width="660">
+   </BOUNDS>
+   <BOUNDS height="465" left="3360" top="585" type="Box" width="675">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" encoded="0" values="|vertex&cr;&lf;normal|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="6" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="5175" top="3780" type="Node" width="855">
+   </BOUNDS>
+   <BOUNDS height="735" left="5175" top="3780" type="Box" width="5535">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" encoded="0" values="|the indexbuffer defines which 3 vertices in the vertexbuffer make up each face (polygon) of a mesh. in this case face 0 is made of vertex number 0, 1, and 2, face 1 of vertex number 0, 1 and 3 in the vertexbuffer.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE id="5" nodename="DrawFixed (EX9.Effect)" systemname="DrawFixed (EX9.Effect)">
+   <BOUNDS height="0" left="2205" top="6030" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Texture" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   <PIN pinname="Transform" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="5" dstpinname="Mesh" srcnodeid="18" srcpinname="Mesh">
+   </LINK>
+   <NODE id="4" nodename="Fill (EX9.RenderState)" systemname="Fill (EX9.RenderState)">
+   <BOUNDS height="0" left="1335" top="5625" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Fill Mode" slicecount="1" values="Solid">
+   </PIN>
+   <PIN pinname="Render State Out" visible="1">
+   </PIN>
+   <PIN pinname="Render State In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="5" dstpinname="Render State" srcnodeid="4" srcpinname="Render State Out">
+   </LINK>
+   <NODE componentmode="InABox" id="3" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="660" top="1065" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="6780" top="8940" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="1170" left="660" top="1065" type="Box" width="690">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="4" values="0,1,2,3">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="2" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="630" top="570" type="Node" width="285">
+   </BOUNDS>
+   <BOUNDS height="450" left="630" top="570" type="Box" width="735">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" encoded="0" values="|number in buffer|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="1" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="3690" top="4635" type="Node" width="6300">
+   </BOUNDS>
+   <BOUNDS height="1200" left="3690" top="4635" type="Box" width="3795">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" encoded="0" values="|a mesh has a vertexbuffer (describing the vertex data) and an indexbuffer ( int this case a spreaad of indices).  mesh is the supported format for rendering-nodes of the ex9 pipeline, these are drawfixed and effect-nodes|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="18" dstpinname="Vertex Buffer" srcnodeid="19" srcpinname="Vertex Buffer">
+   </LINK>
+   <LINK dstnodeid="19" dstpinname="Position XYZ" srcnodeid="17" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="19" dstpinname="Texture Coordinate 0 XY" srcnodeid="15" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="19" dstpinname="Normal XYZ" srcnodeid="8" srcpinname="Y Output Value">
+   </LINK>
+   <NODE id="0" nodename="Shade (EX9.RenderState)" systemname="Shade (EX9.RenderState)">
+   <BOUNDS height="0" left="1335" top="5145" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Render State Out" visible="1">
+   </PIN>
+   <PIN pinname="Shading" slicecount="1" values="Gouraud">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="4" dstpinname="Render State In" srcnodeid="0" srcpinname="Render State Out">
+   </LINK>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="22">
+   <BOUNDS type="Node" left="2190" top="6555" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2190" top="6555" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Layer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Layer" dstnodeid="22" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="25">
+   <BOUNDS type="Node" left="6900" top="180" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6900" top="180" width="2250" height="480">
+   </BOUNDS>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Color">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="19" dstpinname="Diffuse Color">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="26" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="300" top="3615" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="300" top="3615" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Transform">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Output Node" dstnodeid="5" dstpinname="Transform">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="27" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="4170" top="7110" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4170" top="7110" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Mesh" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Mesh" dstnodeid="27" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="28" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="5760" top="6810" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5760" top="6810" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="meshtransform" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Output Node" dstnodeid="28" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="29" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="5910" top="7395" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5910" top="7395" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Output Node|">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="30" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="4890" top="7485" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4890" top="7485" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Output Node|">
+   </PIN>
+   </NODE>
+   </PATCH>
