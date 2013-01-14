@@ -1,0 +1,111 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
+   <PATCH nodename="D:\WORK\VVVV\130104_Kinectstrument_GIT\tests\osc\oscMulti\oscHub.v4p" systemname="oscHub" filename="D:\WORK\VVVV\130104_Kinectstrument_GIT\tests\osc\oscMulti\oscHub.v4p">
+   <BOUNDS type="Window" left="9105" top="4665" width="9000" height="6435">
+   </BOUNDS>
+   <NODE systemname="OSCfloatSender" filename="..\oscSamples\communication\OSCfloatSender.v4p" nodename="..\oscSamples\communication\OSCfloatSender.v4p" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="1515" top="3465" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Do Send" visible="1" slicecount="1" values="-1.28999996185303">
+   </PIN>
+   <PIN pinname="Data" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Data Count" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Remote Host" slicecount="1" values="localhost" encoded="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="3" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="2085" top="2535" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2085" top="2535" width="840" height="675">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" values="4000,6002,5000">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Port">
+   </LINK>
+   <NODE systemname="OSCfloatReceiver" filename="..\oscSamples\communication\OSCfloatReceiver.v4p" nodename="..\oscSamples\communication\OSCfloatReceiver.v4p" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="1215" top="1170" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Data Count" visible="1">
+   </PIN>
+   <PIN pinname="Data" visible="1">
+   </PIN>
+   <PIN pinname="OnReceive" visible="1">
+   </PIN>
+   <PIN pinname="Address" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="3945" top="2310" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3945" top="2310" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="OnReceive" dstnodeid="6" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Data" dstnodeid="2" dstpinname="Data">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Data Count" dstnodeid="2" dstpinname="Data Count">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="OnReceive" dstnodeid="2" dstpinname="Do Send">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="945" top="2940" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="945" top="2940" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="localhost" encoded="0">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="localhost" encoded="0">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="IP">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="2" dstpinname="Remote Host">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="8" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="1800" top="435" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1800" top="435" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="/floatosc" encoded="0">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Address" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output String" dstnodeid="2" dstpinname="Address">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output String" dstnodeid="5" dstpinname="Address">
+   </LINK>
+   </PATCH>

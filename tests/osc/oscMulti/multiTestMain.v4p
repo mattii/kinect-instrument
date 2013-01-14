@@ -1,0 +1,17 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
+   <PATCH nodename="D:\WORK\VVVV\130104_Kinectstrument_GIT\tests\osc\oscMulti\multiTestMain.v4p" systemname="multiTestMain" filename="D:\WORK\VVVV\130104_Kinectstrument_GIT\tests\osc\oscMulti\multiTestMain.v4p">
+   <BOUNDS type="Window" left="11640" top="11535" width="5685" height="1530">
+   </BOUNDS>
+   <NODE systemname="OSCfloatSender" filename="..\oscSamples\communication\OSCfloatSender.v4p" nodename="D:\WORK\VVVV\130104_Kinectstrument_GIT\tests\osc\oscSamples\communication\OSCfloatSender.v4p" componentmode="InAWindow" id="1">
+   <BOUNDS type="Node" left="450" top="420" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="oscHub" filename="oscHub.v4p" nodename="D:\WORK\VVVV\130104_Kinectstrument_GIT\tests\osc\oscMulti\oscHub.v4p" componentmode="InAWindow" id="2">
+   <BOUNDS type="Node" left="1950" top="420" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="multipleRecieversTester" filename="multipleRecieversTester.v4p" nodename="D:\WORK\VVVV\130104_Kinectstrument_GIT\tests\osc\oscMulti\multipleRecieversTester.v4p" componentmode="InAWindow" id="3">
+   <BOUNDS type="Node" left="2925" top="420" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   </PATCH>

@@ -1,0 +1,135 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+   <PATCH nodename="C:\Users\Matthias Lohscheidt\Desktop\Reäktor\dev\reaktor\kinect\vvvv\lib\nodes\communication\OSCfloatReceiver.v4p" filename="C:\Users\Matthias Lohscheidt\Desktop\vvvv_45beta27.1\Tests\OSC\floatReceiver.v4p" systemname="floatReceiver">
+   <BOUNDS height="8130" left="9930" top="1665" type="Window" width="7605">
+   </BOUNDS>
+   <NODE componentmode="Hidden" id="0" nodename="OSCDecoder (Network)" systemname="OSCDecoder (Network)">
+   <BOUNDS height="100" left="3120" top="2730" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Address" visible="1">
+   </PIN>
+   <PIN pinname="TypeTags" visible="1">
+   </PIN>
+   <PIN pinname="Arguments" visible="1">
+   </PIN>
+   <PIN pinname="Bin Sizes" visible="1">
+   </PIN>
+   <PIN pinname="OnReceive" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="1" nodename="UDP (Network Server)" systemname="UDP (Network Server)">
+   <BOUNDS height="100" left="2745" top="1350" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Local Port" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Queue Count" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="2" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="5475" top="705" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="5475" top="705" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" pintype="Input" slicecount="1" visible="1" values="6000">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Port">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="1" dstpinname="Local Port" srcnodeid="2" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="3" nodename="S+H (String)" systemname="S+H (String)">
+   <BOUNDS height="100" left="3030" top="2085" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="Input" srcnodeid="1" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Set" srcnodeid="1" srcpinname="Queue Count">
+   </LINK>
+   <LINK dstnodeid="0" dstpinname="Input" srcnodeid="3" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="4" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="3705" top="705" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="3705" top="705" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Input String" pintype="Input" slicecount="1" visible="1" values="/floatosc">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Address">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="0" dstpinname="Address" srcnodeid="4" srcpinname="Output String">
+   </LINK>
+   <NODE componentmode="InABox" id="5" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="1995" top="5475" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1995" top="5475" type="Box" width="1200">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="60">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Data">
+   </PIN>
+   <PIN pinname="Y Output Value" pintype="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="7" nodename="AsValue (String)" systemname="AsValue (String)">
+   <BOUNDS height="100" left="2010" top="3615" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="7" dstpinname="Input" srcnodeid="0" srcpinname="Arguments">
+   </LINK>
+   <NODE componentmode="InABox" id="9" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="3915" top="5475" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="3915" top="5475" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Data Count|">
+   </PIN>
+   <PIN pinname="Y Output Value" pintype="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="9" dstpinname="Y Input Value" srcnodeid="0" srcpinname="Bin Sizes">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="5" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="27">
+   <BOUNDS type="Node" left="5265" top="5475" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5265" top="5475" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="OnReceive" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="OnReceive" dstnodeid="27" dstpinname="Y Input Value">
+   </LINK>
+   </PATCH>
