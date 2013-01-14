@@ -321,6 +321,10 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Color">
    </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="19" dstpinname="Diffuse Color">
    </LINK>
@@ -341,7 +345,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4170" top="7110" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Mesh" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Mesh">
    </PIN>
    </NODE>
    <LINK srcnodeid="18" srcpinname="Mesh" dstnodeid="27" dstpinname="Input Node">
@@ -351,9 +355,21 @@
    </BOUNDS>
    <BOUNDS type="Box" left="5760" top="6810" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="meshtransform" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="meshtransform">
    </PIN>
    </NODE>
    <LINK srcnodeid="26" srcpinname="Output Node" dstnodeid="28" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="29" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="6690" top="5700" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6690" top="5700" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Texture" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="29" srcpinname="Output Node" dstnodeid="5" dstpinname="Texture">
    </LINK>
    </PATCH>
