@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
    <PATCH nodename="D:\WORK\VVVV\130104_Kinectstrument_GIT\tests\osc\oscMulti\multipleRecieversTester.v4p" systemname="multipleRecieversTester" filename="D:\WORK\VVVV\130104_Kinectstrument_GIT\tests\osc\oscMulti\multipleRecieversTester.v4p">
-   <BOUNDS type="Window" left="9960" top="3180" width="9000" height="6000">
+   <BOUNDS type="Window" left="18210" top="4665" width="9000" height="6345">
    </BOUNDS>
    <NODE systemname="OSCfloatReceiver" filename="..\oscSamples\communication\OSCfloatReceiver.v4p" nodename="D:\WORK\VVVV\130104_Kinectstrument_GIT\tests\osc\oscSamples\communication\OSCfloatReceiver.v4p" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="3060" top="2775" width="100" height="100">
@@ -25,9 +25,9 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4545" top="2340" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="6001">
+   <PIN pinname="Y Input Value" slicecount="1" values="6002">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -41,9 +41,9 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2130" top="2340" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="6000">
+   <PIN pinname="Y Input Value" slicecount="1" values="4000">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -59,7 +59,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="5000">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -73,7 +73,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="7050" top="3630" width="480" height="480">
    </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -89,7 +89,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4575" top="3630" width="480" height="480">
    </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -105,7 +105,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2130" top="3630" width="480" height="480">
    </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>

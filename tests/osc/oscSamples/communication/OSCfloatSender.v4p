@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="D:\WORK\VVVV\130104_Kinectstrument_GIT\tests\osc\oscSamples\communication\OSCfloatSender.v4p" filename="C:\Users\Matthias Lohscheidt\Desktop\vvvv_45beta27.1\Tests\OSC\floatSender.v4p" systemname="floatSender">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta29.dtd" >
+   <PATCH nodename="C:\Users\Matthias Lohscheidt\Desktop\vvvv\projects\KinectInstrument\kinect-instrument.git\tests\osc\oscSamples\communication\OSCfloatSender.v4p" filename="C:\Users\Matthias Lohscheidt\Desktop\vvvv_45beta27.1\Tests\OSC\floatSender.v4p" systemname="floatSender">
    <BOUNDS height="6420" left="0" top="4665" type="Window" width="9000">
    </BOUNDS>
-   <NODE componentmode="Hidden" id="3" nodename="OSCEncoder (Network)" systemname="OSCEncoder (Network)">
+   <NODE componentmode="Hidden" id="3" nodename="OSCEncoder (Network)" systemname="OSCEncoder (Network String Legacy)">
    <BOUNDS height="100" left="2955" top="4455" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Type Tags" visible="1">
@@ -19,7 +19,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="5280" top="1230" type="Box" width="750">
    </BOUNDS>
-   <PIN pinname="Y Input Value" pintype="Input" slicecount="1" visible="1" values="-2.13">
+   <PIN pinname="Y Input Value" pintype="Input" slicecount="1" visible="1" values="-1.56">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -76,7 +76,7 @@
    </NODE>
    <LINK dstnodeid="3" dstpinname="Address" srcnodeid="10" srcpinname="Output String" linkstyle="PolyLine">
    </LINK>
-   <NODE componentmode="Hidden" id="12" nodename="UDP (Network Client)" systemname="UDP (Network Client)">
+   <NODE componentmode="Hidden" id="12" nodename="UDP (Network Client)" systemname="UDP (Network Client String)">
    <BOUNDS height="100" left="1530" top="5490" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -187,7 +187,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6165" top="1230" width="1935" height="270">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|change data to see action|" encoded="0">
+   <PIN pinname="Input String" visible="0" slicecount="1" encoded="0" values="|change data to see action|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>

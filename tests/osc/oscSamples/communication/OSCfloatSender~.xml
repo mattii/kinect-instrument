@@ -19,7 +19,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="5280" top="1230" type="Box" width="750">
    </BOUNDS>
-   <PIN pinname="Y Input Value" pintype="Input" slicecount="1" visible="1" values="-2.23">
+   <PIN pinname="Y Input Value" pintype="Input" slicecount="1" visible="1" values="-2.13">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -182,4 +182,18 @@
    </NODE>
    <LINK srcnodeid="32" srcpinname="Output String" dstnodeid="12" dstpinname="Remote Host">
    </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="33" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="6165" top="1230" width="1935" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6165" top="1230" width="1935" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|change data to see action|" encoded="0">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>

@@ -31,6 +31,8 @@
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Ports" encoded="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Port">
    </LINK>

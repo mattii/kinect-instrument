@@ -1169,7 +1169,7 @@
    </PIN>
    <BOUNDS type="Window" left="450" top="1515" width="16560" height="13755">
    </BOUNDS>
-   <PIN pinname="Skala" visible="1" slicecount="1" values="1">
+   <PIN pinname="Skala" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="105">
@@ -1243,9 +1243,9 @@
    <LINK srcnodeid="109" srcpinname="Y" dstnodeid="108" dstpinname="Input">
    </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="110">
-   <BOUNDS type="Node" left="12948" top="12435" width="100" height="100">
+   <BOUNDS type="Node" left="13080" top="12435" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="12948" top="12435" width="795" height="240">
+   <BOUNDS type="Box" left="13080" top="12435" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
