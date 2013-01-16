@@ -37,7 +37,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4065" top="25998" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="11700" top="5655" width="12795" height="8880">
+   <BOUNDS type="Window" left="11955" top="3630" width="12795" height="8880">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -659,9 +659,9 @@
    </PIN>
    <PIN pinname="Red" slicecount="1" visible="1" values="1">
    </PIN>
-   <PIN pinname="Green" visible="1" slicecount="1" values="1">
+   <PIN pinname="Green" visible="1" slicecount="0" values="1">
    </PIN>
-   <PIN pinname="Blue" visible="1" slicecount="1" values="1">
+   <PIN pinname="Blue" visible="1" slicecount="0" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="59" srcpinname="Output" dstnodeid="56" dstpinname="Color">
@@ -865,10 +865,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="78" srcpinname="Output" dstnodeid="79" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="59" dstpinname="Green">
-   </LINK>
-   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="59" dstpinname="Blue">
    </LINK>
    <LINK srcnodeid="65" srcpinname="Y Output Value" dstnodeid="78" dstpinname="Input 2" linkstyle="VHV">
    <LINKPOINT x="11250" y="12090">
@@ -1167,9 +1163,11 @@
    </PIN>
    <PIN pinname=".. To [" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="450" top="1515" width="16560" height="13755">
+   <BOUNDS type="Window" left="4155" top="270" width="16560" height="13755">
    </BOUNDS>
    <PIN pinname="Skala" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Velocity" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="105">
@@ -1457,5 +1455,49 @@
    </LINKPOINT>
    <LINKPOINT x="12420" y="13890">
    </LINKPOINT>
+   </LINK>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="128">
+   <BOUNDS type="Node" left="10035" top="13620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Source Maximum" slicecount="1" values="0.1">
+   </PIN>
+   <PIN pinname="Source Minimum" slicecount="1" values="0.25">
+   </PIN>
+   <PIN pinname="Mapping" slicecount="1" values="Clamp">
+   </PIN>
+   </NODE>
+   <NODE systemname="Abs (Complex)" nodename="Abs (Complex)" componentmode="Hidden" id="130">
+   <BOUNDS type="Node" left="10020" top="13095" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Real" slicecount="1" visible="1" values="0.21">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="130" srcpinname="Output" dstnodeid="128" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="133" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="10035" top="14070" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10035" top="14070" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="128" srcpinname="Output" dstnodeid="133" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="67" srcpinname="Y Output Value" dstnodeid="130" dstpinname="Input Real">
+   </LINK>
+   <LINK srcnodeid="133" srcpinname="Y Output Value" dstnodeid="59" dstpinname="Green">
+   </LINK>
+   <LINK srcnodeid="133" srcpinname="Y Output Value" dstnodeid="59" dstpinname="Blue">
+   </LINK>
+   <LINK srcnodeid="133" srcpinname="Y Output Value" dstnodeid="103" dstpinname="Velocity">
    </LINK>
    </PATCH>

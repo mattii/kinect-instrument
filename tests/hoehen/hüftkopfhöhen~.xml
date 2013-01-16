@@ -1460,4 +1460,18 @@
    </LINK>
    <LINK srcnodeid="1" srcpinname="Joint PositionXYZ" dstnodeid="16" dstpinname="Y Input Value">
    </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="125" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="24000" top="12735" width="6270" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="24000" top="12735" width="1260" height="1620">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|!!!!!!!hüfte / hals verkürzt sich nur in 2d und muss noch richtig berechnet werden!!!!!!!!|" encoded="0">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>
